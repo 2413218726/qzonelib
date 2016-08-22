@@ -224,8 +224,9 @@ class QzoneLiker(object):
             tids = self.__getTidsAll()
             self.__likeALL(tids)
         elif self.mode == LATEST:
-            tid = self.__getTids(0, 1)[0]
-            self.__like(tid)
+            self.limit = 1
+            tids = self.__getTidsAll()
+            self.__likeALL(tids)
         else:
             ModeNotFoundError()
 
