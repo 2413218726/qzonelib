@@ -264,7 +264,7 @@ class QzoneLiker(QzoneBase):
         """
         if self.mode == KEYWORD or self.mode == KEYWORD_ALL:
             if self.keyword is None:
-                print("请使用setKeyword()来设置关键字")
+                print("请使用setKeyword()方法 设置关键字")
                 return None
 
         if self.mode == KEYWORD:
@@ -292,16 +292,16 @@ class QzoneLiker(QzoneBase):
 if __name__ == '__main__':
     # conf = 'qqlist.ini'  # qq号配置文件，多qq批量点赞
 
-    qq = '2037379421'  # 被点赞的qq号
-    keyword = '啊啊'  # 说说关键字，ALL模式下无需指定
-
+    qq = '1000'  # 被点赞的qq号
+    # keyword = '啊啊'  # 说说关键字，ALL模式下无需指定
+    #
     liker = QzoneLiker(qq, mode=ALL)  # 此模式为默认模式，无需设置keyword
-    liker = QzoneLiker(qq, mode=LATEST)  # 为最近的一条说说点赞
-    liker = QzoneLiker(qq, mode=KEYWORD).setKeyWord(keyword)  # 必须设置keyword
-    liker = QzoneLiker(qq, mode=KEYWORD_ALL).setKeyWord(keyword)  # 必须设置keyword
+    # liker = QzoneLiker(qq, mode=LATEST)  # 为最近的一条说说点赞
+    # liker = QzoneLiker(qq, mode=KEYWORD).setKeyWord(keyword)  # 必须设置keyword
+    # liker = QzoneLiker(qq, mode=KEYWORD_ALL).setKeyWord(keyword)  # 必须设置keyword
 
     # 单独登陆指定qq
-    liker.login('214746448', 'wawa11023')
+    liker.login('10000', 'pwd')
     # print(len(liker.getAllMsglist()))
     # liker.like()
     # 可以批量处理指定配置文件中的qq号信息
