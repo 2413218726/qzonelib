@@ -292,7 +292,7 @@ class QzoneLiker(QzoneBase):
 if __name__ == '__main__':
     # conf = 'qqlist.ini'  # qq号配置文件，多qq批量点赞
 
-    qq = '1000'  # 被点赞的qq号
+    qq = '2037379421'  # 被点赞的qq号
     # keyword = '啊啊'  # 说说关键字，ALL模式下无需指定
     #
     liker = QzoneLiker(qq, mode=ALL)  # 此模式为默认模式，无需设置keyword
@@ -301,8 +301,9 @@ if __name__ == '__main__':
     # liker = QzoneLiker(qq, mode=KEYWORD_ALL).setKeyWord(keyword)  # 必须设置keyword
 
     # 单独登陆指定qq
-    liker.login('10000', 'pwd')
+    liker.login('214746448', 'wawa11023')
     # print(len(liker.getAllMsglist()))
+    liker.getAllShuoShuo()
     # liker.like()
     # 可以批量处理指定配置文件中的qq号信息
     # liker.likeBatch(conf)
